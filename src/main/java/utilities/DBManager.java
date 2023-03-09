@@ -38,5 +38,5 @@ public DBManager() {
         }
 
         return dbConnection;
-
+    }
     }
