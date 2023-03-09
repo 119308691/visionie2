@@ -1,0 +1,7 @@
+
+
+DELETE FROM PATIENTDATA 
+WHERE FNAME = "Tanisha"; 
+
+
+

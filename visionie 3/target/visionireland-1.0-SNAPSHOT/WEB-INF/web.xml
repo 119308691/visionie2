@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>applicationServlet</servlet-name>
+        <servlet-class>servlets.applicationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PatientLoginServlet</servlet-name>
+        <servlet-class>servlets.PatientLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OpticianLoginServlet</servlet-name>
+        <servlet-class>servlets.OpticianLoginServlet</servlet-class>
+    </servlet>
+    
+    
+    <servlet>
+        <servlet-name>singleApplicationServlet</servlet-name>
+        <servlet-class>servlets.singleApplicationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>applicationServlet</servlet-name>
+        <url-pattern>/Application</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>queryServlet</servlet-name>
+        <servlet-class>servlets.queryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>queryServlet</servlet-name>
+        <url-pattern>/Query</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>opticianServlet</servlet-name>
+        <servlet-class>servlets.opticianServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>opticianServlet</servlet-name>
+        <url-pattern>/Optician</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>opticianClaimServlet</servlet-name>
+        <servlet-class>servlets.opticianClaimServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>opticianClaimServlet</servlet-name>
+        <url-pattern>/submitClaim</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>singleQueryServlet</servlet-name>
+        <servlet-class>servlets.singleQueryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>singleQueryServlet</servlet-name>
+        <url-pattern>/singleQueryServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>PatientLoginServlet</servlet-name>
+        <url-pattern>/patientLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OpticianLoginServlet</servlet-name>
+        <url-pattern>/opticianLogin</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>singleApplicationServlet</servlet-name>
+        <url-pattern>/singleApplicationServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
