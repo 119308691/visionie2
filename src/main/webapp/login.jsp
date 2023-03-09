@@ -74,7 +74,7 @@
     <br>
             <h5 class="card-title text-center">Login</h5>
             <br>
-            <form class="form-signin" action="/visionie/patientLogin" method="post">
+            <form class="form-signin" action="/patientLogin" method="post">
               <div class="form-label-group">
                 <input type="PPSN" id="PPSN" name="PPSN" class="form-control" placeholder="PPSN" required autofocus>
                
