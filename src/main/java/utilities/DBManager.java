@@ -16,7 +16,7 @@ public class DBManager {
 public DBManager() {
         
         try {
-            Class.forName("org.postgresql.Driver");
+            Class.forName("org.postgresql.jdbc.Driver");
         } catch (ClassNotFoundException ex) {
             logger.log(Level.SEVERE, null, ex);
         }
@@ -31,8 +31,10 @@ public DBManager() {
         Connection dbConnection = null;
        
         String strUrl = "jdbc:postgresql://eu-west-1.compute.amazonaws.com/heroku_d160m2263lg0dn";
+        String username= "omokxamssldqtg";
+        String password = "a75bb52bc1aba946d1ec95b09569cb3499b730e407d65b785bae0bac5b14ca23";
         try {
-            dbConnection = DriverManager.getConnection(strUrl, "omokxamssldqtg","a75bb52bc1aba946d1ec95b09569cb3499b730e407d65b785bae0bac5b14ca23");
+            dbConnection = DriverManager.getConnection(strUrl, username,password);
         } catch (SQLException sqle) {
             logger.log(Level.SEVERE, null, sqle.getStackTrace());
         }
