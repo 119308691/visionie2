@@ -23,11 +23,12 @@
         </dependency>
     
     
-        <dependency>
+         <dependency>
             
-         <groupId>org.apache.derby</groupId>
-    <artifactId>derbyclient</artifactId>
-    <version>10.14.2.0</version>
+
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>15.0</version>
 </dependency>
 
 

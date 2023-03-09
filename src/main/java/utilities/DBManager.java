@@ -9,15 +9,14 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 public class DBManager {
 
     Logger logger = Logger.getLogger(DBManager.class.getName());
 
-    public DBManager() {
+public DBManager() {
         
         try {
-            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException ex) {
             logger.log(Level.SEVERE, null, ex);
         }
@@ -30,10 +29,10 @@ public class DBManager {
 
 
         Connection dbConnection = null;
-        
-        String strUrl = "jdbc:derby://localhost:1527/vision-ireland;create=true";
+       
+        String strUrl = "jdbc:postgresql://eu-west-1.compute.amazonaws.com/heroku_d160m2263lg0dn";
         try {
-            dbConnection = DriverManager.getConnection(strUrl,"visionireland","visionireland");
+            dbConnection = DriverManager.getConnection(strUrl, "omokxamssldqtg","a75bb52bc1aba946d1ec95b09569cb3499b730e407d65b785bae0bac5b14ca23");
         } catch (SQLException sqle) {
             logger.log(Level.SEVERE, null, sqle.getStackTrace());
         }
@@ -41,5 +40,3 @@ public class DBManager {
         return dbConnection;
 
     }
-
-}
