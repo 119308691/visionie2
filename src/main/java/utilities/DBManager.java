@@ -11,32 +11,27 @@ import java.util.logging.Logger;
 
 public class DBManager {
 
-    Logger logger = Logger.getLogger(DBManager.class.getName());
+    //Logger logger = Logger.getLogger(DBManager.class.getName());
 
-public DBManager() {
+public static void main(String[] args) {
+     Connection conn = null;
+     jdbc:postgresql:
         
         try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException ex) {
-            logger.log(Level.SEVERE, null, ex);
-        }
-        
-    }
+             conn= DriverManager.getConnection( "jdbc:postgresql://eu-west-1.compute.amazonaws.com/heroku_d160m2263lg0dn");
+        if(conn!=null)
+         {
+             System.out.println("connected to database successfully");
+         }
+     }catch(Exception e)
+     {
+         System.out.println("not connected to database");
+         }
+     }
     
    
 //creating new database connection
     public Connection getConnection() {
-
-
-        Connection dbConnection = null;
-       
-        String strUrl = "jdbc:postgresql://eu-west-1.compute.amazonaws.com/heroku_d160m2263lg0dn";
-        try {
-            dbConnection = DriverManager.getConnection(strUrl, "omokxamssldqtg","a75bb52bc1aba946d1ec95b09569cb3499b730e407d65b785bae0bac5b14ca23");
-        } catch (SQLException sqle) {
-            logger.log(Level.SEVERE, null, sqle.getStackTrace());
-        }
-
-        return dbConnection;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     }
