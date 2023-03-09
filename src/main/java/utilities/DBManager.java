@@ -16,7 +16,7 @@ public class DBManager {
 public DBManager() {
         
         try {
-            Class.forName("org.postgresql.jdbc.Driver");
+            Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException ex) {
             logger.log(Level.SEVERE, null, ex);
         }
